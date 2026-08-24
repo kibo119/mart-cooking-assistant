@@ -18,7 +18,6 @@ const SYSTEM_PROMPT = fs.readFileSync(
 );
 
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
-const
 const MODEL = 'gemini-3.6-flash'; // 무료 티어에서 사용 가능한 모델
 
 
