@@ -1,0 +1,173 @@
+/* 전체 기본 설정 */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo",
+    "Malgun Gothic", sans-serif;
+  background: #fdf6ec; /* 따뜻한 크림톤 배경 */
+  color: #33291f;
+}
+
+/* 헤더 영역 */
+.app-header {
+  background: #ff8a3d; /* 요리/음식 느낌의 주황색 */
+  color: white;
+  padding: 20px 16px;
+  text-align: center;
+}
+
+.app-header h1 {
+  margin: 0 0 6px 0;
+  font-size: 22px;
+}
+
+.app-header p {
+  margin: 0;
+  font-size: 13px;
+  opacity: 0.95;
+}
+
+/* 메인 레이아웃 */
+.app-main {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* 카메라 섹션 */
+.camera-section {
+  background: white;
+  border-radius: 16px;
+  padding: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+#video {
+  width: 100%;
+  border-radius: 12px;
+  background: #222;
+  max-height: 320px;
+  object-fit: cover;
+}
+
+#preview {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+.camera-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+/* 버튼 스타일 */
+.btn {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  transition: opacity 0.15s ease;
+}
+
+.btn:active {
+  opacity: 0.75;
+}
+
+.btn-primary {
+  background: #ff8a3d;
+  color: white;
+  flex: 1;
+}
+
+.btn-secondary {
+  background: #f1e4d3;
+  color: #5c4a34;
+  flex: 1;
+}
+
+/* 채팅 섹션 */
+.chat-section {
+  background: white;
+  border-radius: 16px;
+  padding: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  height: 55vh;
+  min-height: 360px;
+}
+
+.chat-window {
+  flex: 1;
+  overflow-y: auto;
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* 채팅 말풍선 */
+.message {
+  padding: 10px 14px;
+  border-radius: 14px;
+  max-width: 85%;
+  font-size: 14px;
+  line-height: 1.5;
+  white-space: pre-wrap; /* 요리 레시피의 줄바꿈을 그대로 표시 */
+}
+
+.message.assistant {
+  background: #fff1e2;
+  align-self: flex-start;
+  border-bottom-left-radius: 4px;
+}
+
+.message.user {
+  background: #ff8a3d;
+  color: white;
+  align-self: flex-end;
+  border-bottom-right-radius: 4px;
+}
+
+.message.user img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-top: 6px;
+}
+
+.message.loading {
+  color: #999;
+  font-style: italic;
+}
+
+/* 입력 폼 */
+.chat-form {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+#chatInput {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #e6d9c6;
+  font-size: 14px;
+}
+
+#chatInput:focus {
+  outline: none;
+  border-color: #ff8a3d;
+}
