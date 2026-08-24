@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>오늘 뭐 해먹지? — 마트 요리 추천 도우미</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="app-header">
+    <h1>🛒 오늘 뭐 해먹지?</h1>
+    <p>재료를 촬영하거나 입력하면 초보자도 쉽게 만들 수 있는 요리를 추천해드려요.</p>
+  </header>
+
+  <main class="app-main">
+
+    <!-- 카메라 영역 -->
+    <section class="camera-section" id="cameraSection">
+      <video id="video" autoplay playsinline></video>
+      <canvas id="canvas" hidden></canvas>
+
+      <div class="camera-controls">
+        <button id="startCameraBtn" class="btn btn-secondary">📷 카메라 켜기</button>
+        <button id="captureBtn" class="btn btn-primary" hidden>📸 촬영해서 물어보기</button>
+        <label for="fileInput" class="btn btn-secondary">🖼️ 사진 업로드</label>
+        <input type="file" id="fileInput" accept="image/*" hidden />
+      </div>
+
+      <!-- 촬영/업로드한 사진 미리보기 -->
+      <img id="preview" hidden alt="촬영된 재료 사진 미리보기" />
+    </section>
+
+    <!-- 채팅 영역 -->
+    <section class="chat-section">
+      <div id="chatWindow" class="chat-window">
+        <div class="message assistant">
+          안녕하세요! 마트에서 고르고 있는 재료를 카메라로 보여주시거나, 재료 이름을 입력해주세요.
+          지금 있는 재료로 뭘 만들 수 있는지 알려드릴게요 🙂
+        </div>
+      </div>
+
+      <form id="chatForm" class="chat-form">
+        <input
+          type="text"
+          id="chatInput"
+          placeholder="예: 대패삼겹살, 양배추, 계란 있어요 / 매운 거 좋아해요"
+          autocomplete="off"
+        />
+        <button type="submit" class="btn btn-primary">보내기</button>
+      </form>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
